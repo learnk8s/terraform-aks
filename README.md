@@ -2,6 +2,8 @@
 
 Playground to learn Terraform on Azure and provision an AKS cluster in one command.
 
+You can find the [full tutorial on the Learnk8s blog](https://learnk8s.io/blog/get-start-terraform-aks/).
+
 ## Getting started
 
 Install the Azure CLI.
