@@ -1,5 +1,5 @@
 provider "azurerm" {
-  version = "1.23"
+  version = "=1.28"
 }
 
 provider "helm" {
@@ -29,7 +29,7 @@ resource "azurerm_resource_group" "rg" {
   location = "uksouth"
 }
 
-resource azurerm_network_security_group "sg" {
+resource "azurerm_network_security_group" "sg" {
   name                = "aks-nsg-${var.name}"
   location            = "${azurerm_resource_group.rg.location}"
   resource_group_name = "${azurerm_resource_group.rg.name}"
