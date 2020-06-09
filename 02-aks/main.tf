@@ -1,13 +1,5 @@
 provider "azurerm" {
-  version = "=1.28"
-}
-
-variable "service_principal_client_id" {
-  description = "The Client ID for the Service Principal"
-}
-
-variable "service_principal_client_secret" {
-  description = "The Client Secret for the Service Principal"
+  version = "=2.13.0"
 }
 
 resource "azurerm_resource_group" "rg" {
@@ -76,9 +68,8 @@ resource "azurerm_kubernetes_cluster" "cluster" {
     vnet_subnet_id = "${azurerm_subnet.subnet.id}"
   }
 
-  service_principal {
-    client_id     = "${var.service_principal_client_id}"
-    client_secret = "${var.service_principal_client_secret}"
+  identity {
+    type = "SystemAssigned"
   }
 
   network_profile {
