@@ -5,7 +5,6 @@ module "dev_cluster" {
 
 module "preprod_cluster" {
   source = "./aks-module"
-
   name = "preprod"
 }
 

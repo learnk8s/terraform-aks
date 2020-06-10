@@ -67,5 +67,6 @@ Change your current directory to:
 - <02-aks>
 - <03-aks-helm>
 - <04-templated>
+- <05-aks-acr>
 
 to start provisioning your infrastructure with Terraform.
